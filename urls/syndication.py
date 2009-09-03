@@ -1,4 +1,4 @@
-"""Urls for python_django.feedgrabber syndication"""
+"""Urls for feedgrabber syndication"""
 from django.conf.urls.defaults import *
 
 from feedgrabber.feeds import LatestItems

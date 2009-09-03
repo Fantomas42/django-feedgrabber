@@ -1,4 +1,4 @@
-"""Views for python_django.feedgrabber feeds"""
+"""Views for feedgrabber feeds"""
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from django.utils.translation import ugettext as _

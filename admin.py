@@ -1,4 +1,4 @@
-"""Admin for python_django.feedgrabber"""
+"""Admin for feedgrabber"""
 from django.contrib import admin
 from django.utils.translation import ugettext as _
 

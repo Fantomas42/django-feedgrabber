@@ -1,4 +1,4 @@
-"""Views for python_django.feedgrabber authors"""
+"""Views for feedgrabber authors"""
 from django.shortcuts import get_object_or_404
 from django.views.generic.list_detail import object_list
 

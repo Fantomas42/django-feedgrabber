@@ -1,4 +1,4 @@
-"""Urls for python_django.feedgrabber authors"""
+"""Urls for feedgrabber authors"""
 from django.conf.urls.defaults import *
 
 from feedgrabber.models import Author

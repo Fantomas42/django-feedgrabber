@@ -1,4 +1,4 @@
-"""Urls for python_django.feedgrabber feeds"""
+"""Urls for feedgrabber feeds"""
 from django.conf.urls.defaults import *
 
 from feedgrabber.models import Feed

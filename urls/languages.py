@@ -1,4 +1,4 @@
-"""Urls for python_django.feedgrabber languages"""
+"""Urls for feedgrabber languages"""
 from django.conf.urls.defaults import *
 
 urlpatterns = patterns('feedgrabber.views.languages',

@@ -1,4 +1,4 @@
-"""Feeds for python_django.feedgrabber """
+"""Feeds for feedgrabber """
 from django.core.urlresolvers import reverse
 from django.contrib.syndication.feeds import Feed
 from django.contrib.syndication.feeds import FeedDoesNotExist

@@ -1,4 +1,4 @@
-"""Views for python_django.feedgrabber languages"""
+"""Views for feedgrabber languages"""
 from django.template import RequestContext
 from django.shortcuts import render_to_response
 from django.views.generic.list_detail import object_list
