@@ -135,6 +135,7 @@ class Item(models.Model):
     title = models.CharField(_('title'), max_length=300)
     content = models.TextField(_('content'))
     guid = models.CharField(_('guid'), max_length=300, blank=True)
+    slug = models.SlugField(_('slug'))
 
     author = models.ForeignKey(Author, verbose_name=_('author'),
                                blank=True, null=True)
@@ -151,7 +152,7 @@ class Item(models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('feedgrabber_item_detail', (self.pk,))
+        return ('feedgrabber_item_detail', (self.slug,))
 
     def get_content(self):
         if not '</p>' in self.content:
@@ -173,8 +174,12 @@ class Item(models.Model):
         """Fill the from with the entry"""
         self.url = entry.link
         self.title = entry.title
-        self.content = entry.get('summary') or entry.get('subtitle', _('not defined'))
+        try:
+            self.content = entry.content[0]['value']
+        except:
+            self.content = entry.get('summary') or entry.get('subtitle', _('not defined'))
         self.guid = entry.link
+        self.slug = slugify(entry.title)
         self.ressource = len(entry.get('enclosures', [])) and entry.enclosures[0].href or ''
         self.comments = entry.get('comments', '')
         self.publication_date = datetime(*entry.date_parsed[:7])
