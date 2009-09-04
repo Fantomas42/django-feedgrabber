@@ -6,8 +6,8 @@ from django.contrib.syndication.feeds import FeedDoesNotExist
 from feedgrabber.models import Item
 
 class ItemFeed(Feed):
-    title_template = 'syndication/item_title.html'
-    description_template= 'syndication/item_description.html'
+    title_template = 'feeds/item_title.html'
+    description_template= 'feeds/item_description.html'
 
     def link(self):
         return reverse('feedgrabber_item_list')
