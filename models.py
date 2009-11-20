@@ -135,7 +135,7 @@ class Item(models.Model):
     title = models.CharField(_('title'), max_length=300)
     content = models.TextField(_('content'))
     guid = models.CharField(_('guid'), max_length=300, blank=True)
-    slug = models.SlugField(_('slug'))
+    slug = models.SlugField(_('slug'), unique=True)
 
     author = models.ForeignKey(Author, verbose_name=_('author'),
                                blank=True, null=True)
