@@ -1,27 +1,26 @@
-from setuptools import setup, find_packages
 import os
+from setuptools import setup, find_packages
 
-version = '0.1'
+import feedgrabber
 
 setup(name='django-feedgrabber',
-      version=version,
+      version=feedgrabber.__version__,
       
       description='A RSS/Atom feeds grabber, for your Django websites.',
       long_description=open(os.path.join('README.rst')).read(),
       keywords='django, rss, atom',
 
-      author='Fantomas42',
-      author_email='fantomas42@gmail.com',
-      url='http://github.com/Fantomas42/django-feedgrabber',
-      license='BSD License',
+      author=feedgrabber.__author__,
+      author_email=feedgrabber.__email__,
+      url=feedgrabber.__url__,
+      license=feedgrabber.__license__,
 
       packages=find_packages(),
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-          'setuptools',
           'FeedParser',
-      ],
+          ],
 
       classifiers=[
           'Development Status :: 4 - Beta',
